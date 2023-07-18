@@ -6,6 +6,7 @@ import Input from "@/app/components/inputs/Input";
 import Button from "@/app/components/Button";
 import Separator from "@/app/components/Separator";
 import AuthSocialButton from "./AuthSocialButton";
+import axios from "axios"
 
 import { BsGithub, BsGoogle} from "react-icons/bs"
 
@@ -40,7 +41,7 @@ const AuthForm = () => {
         setIsLoading(true);
 
         if(variant === "REGISTER"){
-            // Register
+            axios.post("/api/register", data);
         }
 
         if(variant === "LOGIN"){
@@ -124,7 +125,10 @@ const AuthForm = () => {
                     <div>
                         {variant === "LOGIN"? 'New to Messenger?': "Already have an account?"}
                     </div>
-                    <div className="underline cursor-pointer">
+                    <div 
+                        onClick={toggleVariant}
+                        className="underline cursor-pointer"
+                    >
                         {variant === "LOGIN"? 'Create an account': 'Login'}
                     </div>
                 </div>
