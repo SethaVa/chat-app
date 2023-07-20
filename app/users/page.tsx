@@ -2,10 +2,13 @@
 
 import { signOut } from "next-auth/react";
 import Button from "../components/Button";
+import EmptyState from "../components/EmptyState";
 
 const Users = () => {
     return (
-        <Button onClick={() => signOut()}>Log out</Button>
+        <div className="h-full hidden lg:block lg:pl-80">
+            <EmptyState />
+        </div>
     )
 }
 
