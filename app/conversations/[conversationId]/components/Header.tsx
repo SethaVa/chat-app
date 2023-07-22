@@ -26,6 +26,7 @@ const Header: React.FC<HeaderProps> = ({
 
         return "Active"
     }, [conversation])
+    
     return (
         <>
             <ProfileDrawer
