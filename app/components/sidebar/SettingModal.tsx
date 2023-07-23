@@ -88,8 +88,8 @@ const SettingModal: React.FC<SettingModalProps> = ({
                                 </label>
                                 <div className="mt-2 flex items-center gap-x-3">
                                     <Image 
-                                        width={48}
-                                        height={48}
+                                        width="48"
+                                        height="48"
                                         className="rounded-full"
                                         alt="Avatar"
                                         src={image || currentUser?.image || "/images/placeholder.jpg"}
@@ -109,7 +109,6 @@ const SettingModal: React.FC<SettingModalProps> = ({
                                                 >
                                                     Change
                                                 </Button>
-                                                // <HiPhoto size={30} className="text-sky-500" onClick={onClick}/>
                                             );
                                         }}
                                     </CldUploadWidget>
