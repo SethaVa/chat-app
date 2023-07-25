@@ -38,7 +38,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     const title = useMemo(() => {
         return data.name || otherUser.name
     }, [data.name, otherUser.name]);
-
+ 
     const statusText = useMemo(() => {
         if(data.isGroup){
             return `${data.users.length} members`

@@ -69,7 +69,7 @@ const Form = () => {
                     };
 
                     return (
-                        <HiPhoto size={30} className="text-sky-500" onClick={onClick}/>
+                        <HiPhoto size={30} className="text-indigo-500 hover:text-indigo-600 cursor-pointer transition" onClick={onClick}/>
                     );
                 }}
             </CldUploadWidget>
@@ -79,7 +79,7 @@ const Form = () => {
                     <BsEmojiSmile 
                         size={24}
                         onClick={() => setEmojiModalOpen(true)}
-                        className="text-sky-500 hover:text-sky-600 cursor-pointer transition"
+                        className="text-indigo-500 hover:text-indigo-600 cursor-pointer transition"
                     />  
                 </Popover.Button>
 
@@ -108,7 +108,7 @@ const Form = () => {
                 />
                 <button
                     type="submit"
-                    className=" rounded-full p-2 bg-sky-500 hover:bg-sky-600 cursor-pointer transition"
+                    className=" rounded-full p-2 bg-indigo-500 hover:bg-indigo-600 cursor-pointer transition"
                 >
                     <HiPaperAirplane size={18} className="text-white"/>
                 </button>

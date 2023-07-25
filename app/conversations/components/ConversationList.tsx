@@ -14,17 +14,17 @@ import { pusherClient } from "@/app/libs/pusher";
 import { find } from "lodash";
 
 interface ConversationListProps{
-    conversations: FullConversationType[],
+    initialItems: FullConversationType[],
     users: User[]
 }
 
 const ConversationList: React.FC<ConversationListProps> = ({ 
-    conversations,
+    initialItems,
     users
 }) => {
     const session = useSession();
 
-    const [conversationList, setConversationList] = useState(conversations);
+    const [conversationList, setConversationList] = useState(initialItems);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const router = useRouter();
@@ -103,7 +103,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
                         <div className=" text-2xl font-bold text-neutral-800">
                             Messages
                         </div>
-                        <div onClick={() => setIsModalOpen(true)} className="rounded-full p-2 bg-gray-100 text-gray-600 transition hover:opacity-70 cursor-pointer">
+                        <div onClick={() => setIsModalOpen(true)} className="rounded-full p-2 bg-indigo-500 text-white transition hover:bg-indigo-600 cursor-pointer">
                             <MdOutlineGroupAdd size={20} />
                         </div>
                     </div>
